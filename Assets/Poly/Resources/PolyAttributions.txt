@@ -1,0 +1,31 @@
+This project uses the following items from Poly (http://poly.google.com):
+
+Title: Cat
+Author: Poly by Google
+URL: https://poly.google.com/view/6dM1J6f6pm9
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
+
+Title: Giant House Spider
+Author: Zane Brant
+URL: https://poly.google.com/view/cbFePDoI8yi
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
+
+Title: Sci-Fi Research Facility
+Author: Dan Page
+URL: https://poly.google.com/view/1xcevVGIXMf
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
+
+Title: Solve et Coagula
+Author: 3Donimus
+URL: https://poly.google.com/view/3UL8Bz_Id6I
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
+
+Title: Winter Landscape - Kandinsky
+Author: The Sabby Life
+URL: https://poly.google.com/view/1oogrGd3YS0
+License: Creative Commons CC-BY
+https://creativecommons.org/licenses/by/3.0/legalcode
