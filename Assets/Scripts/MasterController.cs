@@ -12,13 +12,34 @@ public class MasterController : MonoBehaviour
             set { _channel = value; }
         }
 
-               [SerializeField]
+        [SerializeField]
         Transform _world;
 
         public Transform World  {
             get { return _world; }
             set { _world = value; }
         }
+
+    [SerializeField]
+    Vector3 _vec;
+
+    public Vector3 Vec
+    {
+        get { return _vec; }
+        set { _vec = value; }
+    }
+
+    [SerializeField]
+    float _flo;
+
+    public float Flo
+    {
+        get { return _flo; }
+        set { 
+            
+            _flo = value;
+        }
+    }
 
     // Start is called before the first frame update
     void Start()
