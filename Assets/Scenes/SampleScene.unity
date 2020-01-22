@@ -256,11 +256,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 440338611}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac2e969cb2f4188439b44274d48f2ec8, type: 3}
+  m_Script: {fileID: 11500000, guid: e37a810ec51cb0c419d831237c39fed5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _channel: 0
   _world: {fileID: 0}
+  _vec: {x: 0, y: 0, z: 0}
+  _flo: 0
 --- !u!4 &440338613
 Transform:
   m_ObjectHideFlags: 0
@@ -508,7 +510,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 534669902}
   m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d6716b3cb068d194b8b771afc1e899e1, type: 3}
+  m_Script: {fileID: 11500000, guid: ddf43a0d08dbf1f4da11d53f59d1ae06, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
