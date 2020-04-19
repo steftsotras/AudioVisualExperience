@@ -1,8 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-#region License and Information
+﻿#region License and Information
 /*****
 * GIFLoader.cs
 * -------------
@@ -363,22 +359,15 @@ namespace B83.Image.GIF
     {
         byte[] buf = new byte[255];
         GIFGraphicControlExt lastGrCtrl = null;
-        private static TextWriter log2;
 
         public static void Log(string aText)
         {
-            log2.WriteLine(aText);
-            log2.Flush();
+            //Debug.Log(aText);
         }
 
         public GIFLoader()
         {
-            log2 = new System.IO.StreamWriter("C:\\Data\\Log.txt");
             Log("GIFLoader created");
-        }
-        ~GIFLoader()
-        {
-            log2.Close();
         }
 
         public GIFImage Load(string aFileName)

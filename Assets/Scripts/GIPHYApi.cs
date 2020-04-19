@@ -12,9 +12,9 @@ namespace Assets.Scripts
     public class GIPHYApi
     {
         private const string RANDOM_ENDPOINT = "https://api.giphy.com/v1/gifs/random";
-        private const string SEARCH_ENDPOINT = "http://api.giphy.com/v1/gifs/search";
-        private const string TRANSLATE_ENDPOINT = "http://api.giphy.com/v1/gifs/translate";
-        private const string TRENDING_ENDPOINT = "http://api.giphy.com/v1/gifs/trending";
+        private const string SEARCH_ENDPOINT = "https://api.giphy.com/v1/gifs/search";
+        private const string TRANSLATE_ENDPOINT = "https://api.giphy.com/v1/gifs/translate";
+        private const string TRENDING_ENDPOINT = "https://api.giphy.com/v1/gifs/trending";
 
         private const string DEFAULT_STRING = "";
         private const string DEFAULT_RATING = "";
