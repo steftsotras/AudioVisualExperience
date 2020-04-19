@@ -93,7 +93,6 @@ namespace Assets.Scripts
                 Debug.LogError(request.error);
                 onError(request.error);
             }
-
             var result = JsonUtility.FromJson<T>(request.downloadHandler.text);
             onSuccess(result);
         }
