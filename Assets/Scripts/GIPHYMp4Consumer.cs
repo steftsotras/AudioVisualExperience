@@ -8,36 +8,69 @@ public class GIPHYMp4Consumer : MonoBehaviour
 
     [SerializeField]
     string _apiKey = "IvjIuPerpxyclVUqc4Tyi9uvIiJNyaNh";
-
     public string ApiKey
     {
         get { return _apiKey; }
         set { _apiKey = value; }
     }
 
+    [SerializeField]
+    string _tag = "lofi";
+    public string Tag
+    {
+        get { return _tag; }
+        set { _tag = value; }
+    }
+
     public VideoPlayer videoPlayer;
 
     private GIPHYApi api;
 
+    private RootImage current = null;
+
     void Start()
     {
         api = new GIPHYApi(ApiKey);
-        StartCoroutine(api.Random(tag: "lofi", onSuccess: (result) =>
+        LoadNextVideo();
+    }
+
+    public void LoadNextVideo()
+    {
+        StartCoroutine(api.Random(Tag, onSuccess: (result) =>
         {
-            StartCoroutine(playVideo(result.data.images.original.mp4));
+            if (result == null)
+            {
+                return;
+            }
+            current = result.data;
+            StartCoroutine(PlayVideo());
         }));
     }
 
-    IEnumerator playVideo(string videoUrl, bool firstRun = true)
+    IEnumerator PlayVideo()
     {
+        while (current == null)
+        {
+            Debug.Log("No video in queue");
+            yield return null;
+        }
+        VideoPlayer clone = null;
+        if (videoPlayer.isPlaying)
+        {
+            //clone so it will load the next video silently
+            clone = Instantiate(videoPlayer);
+        }
+
+        var vp = clone ?? videoPlayer;
+
         //Set video Clip To Play 
-        videoPlayer.url = videoUrl;
+        vp.url = current.images.original.mp4;
 
         //Prepare video
-        videoPlayer.Prepare();
+        vp.Prepare();
 
         //Wait until this video is prepared
-        while (!videoPlayer.isPrepared)
+        while (!vp.isPrepared)
         {
             Debug.Log("Preparing video");
             yield return null;
@@ -48,7 +81,13 @@ public class GIPHYMp4Consumer : MonoBehaviour
         //image.texture = videoPlayerList[videoIndex].texture;
 
         //Play first video
-        videoPlayer.Play();
+        vp.Play();
+
+        if (clone != null)
+        {
+            Destroy(videoPlayer);
+            videoPlayer = clone;
+        }
 
         //Wait while the current video is playing
         /*bool reachedHalfWay = false;
